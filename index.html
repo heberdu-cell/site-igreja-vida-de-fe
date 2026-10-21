@@ -47,9 +47,10 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   
   <style>
+    /* Hero com overlay mais suave e luminoso, valorizando a foto de fundo */
     .hero-bg {
-      background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.90)), 
-                  url('https://images.unsplash.com/photo-1510590337019-5ef8d3d32116?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.62) 0%, rgba(15, 23, 42, 0.70) 50%, rgba(15, 23, 42, 0.88) 100%), 
+                  url('https://images.unsplash.com/photo-1510590337019-5ef8d3d32116?auto=format&fit=crop&w=1920&q=85') center/cover no-repeat;
     }
   </style>
 </head>
@@ -65,10 +66,10 @@
           Av. Heráclito Mourão de Miranda, 2630 - BH
         </span>
 
-        <!-- Horário do Culto acrescentado -->
+        <!-- Horário do Culto -->
         <span class="flex items-center gap-1.5 text-brand-300 font-medium">
           <i data-lucide="clock" class="w-3.5 h-3.5 text-brand-400"></i>
-          Culto aos Domingos, às 18h30.
+          Cultos aos Domingos, às 18h30
         </span>
 
         <!-- Contato -->
@@ -93,7 +94,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
         
-        <!-- Logo Oficial IVF (Com fallback automático para o drive/logo.png e texto) -->
+        <!-- Logo Oficial IVF -->
         <a href="#" class="flex items-center">
           <img 
             src="logo-azul-transp.png" 
@@ -108,8 +109,8 @@
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center space-x-7 text-sm font-medium text-slate-700">
-          <a href="#evento-especial" class="text-brand-600 font-semibold flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-brand-500 animate-ping"></span> Culto Especial 11/10
+          <a href="#cultos" class="text-brand-600 font-semibold flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span> Nossos Cultos
           </a>
           <a href="#sobre" class="hover:text-brand-600 transition">Quem Somos</a>
           <a href="#horarios" class="hover:text-brand-600 transition">Cultos & Live</a>
@@ -133,7 +134,7 @@
 
     <!-- Mobile Menu Modal -->
     <div id="mobileMenu" class="hidden md:hidden border-t border-slate-100 bg-white px-4 pt-3 pb-6 space-y-3">
-      <a href="#evento-especial" class="block py-2 text-brand-600 font-bold">★ Culto Especial 11/10</a>
+      <a href="#cultos" class="block py-2 text-brand-600 font-bold">★ Nossos Cultos</a>
       <a href="#sobre" class="block py-2 text-slate-700 font-medium">Quem Somos</a>
       <a href="#horarios" class="block py-2 text-slate-700 font-medium">Cultos & Live</a>
       <a href="#michelle" class="block py-2 text-slate-700 font-medium">Falar com Michelle</a>
@@ -146,43 +147,53 @@
     </div>
   </nav>
 
-  <!-- ================= HERO SECTION ================= -->
-  <section class="hero-bg text-white py-24 sm:py-32 px-4 relative flex items-center min-h-[560px]">
-    <div class="max-w-4xl mx-auto text-center relative z-10">
-      <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/20 border border-brand-400/30 text-brand-300 text-xs sm:text-sm font-semibold mb-6">
-        <i data-lucide="sparkles" class="w-4 h-4 text-brand-400"></i> Uma igreja viva, acolhedora e bíblica em BH
-      </span>
-      <h1 class="text-4xl sm:text-6xl font-serif font-bold tracking-tight text-white mb-6 leading-tight">
-        Lugar de Família, <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 via-brand-400 to-amber-200">Fé e Novos Começos</span>
+  <!-- ================= HERO SECTION (PRIMEIRO BLOCO CLEAN E ILUMINADO) ================= -->
+  <section class="hero-bg text-white py-28 sm:py-36 px-4 relative flex items-center min-h-[580px]">
+    <div class="max-w-3xl mx-auto text-center relative z-10">
+      
+      <!-- Selo sutil e requintado -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/40 border border-white/20 text-brand-200 text-xs sm:text-sm font-medium mb-8 backdrop-blur-md tracking-wide">
+        <i data-lucide="sparkles" class="w-4 h-4 text-brand-300"></i>
+        <span>Uma igreja bíblica, calorosa e familiar em Belo Horizonte</span>
+      </div>
+
+      <!-- Título Principal com tipografia clássica e arejada -->
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-bold tracking-tight text-white mb-6 leading-[1.15] drop-shadow-sm">
+        Lugar de Família, <br>
+        <span class="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-brand-300 to-amber-100">Fé e Novos Começos</span>
       </h1>
-      <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-        Não importa onde você esteve ou como você chega. Na Igreja Vida de Fé, você e sua família encontram comunhão sincera, acolhimento pastoral e o poder transformador da Palavra de Deus.
+
+      <!-- Subtítulo limpo e acolhedor -->
+      <p class="text-base sm:text-xl text-slate-200 max-w-2xl mx-auto mb-10 leading-relaxed font-light tracking-wide drop-shadow">
+        Não importa onde você esteve ou como chega até aqui: você e sua família encontram comunhão sincera, acolhimento pastoral e o poder vivo da Palavra de Deus.
       </p>
 
+      <!-- Botões de Ação refinados -->
       <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-        <a href="#evento-especial" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-dark-950 font-bold transition duration-200 shadow-lg shadow-brand-500/30 flex items-center justify-center gap-2">
-          <i data-lucide="sparkle" class="w-5 h-5"></i> Culto Especial (11/10)
+        <a href="#cultos" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-500 hover:bg-brand-400 text-dark-950 font-bold transition duration-200 shadow-xl shadow-brand-500/25 flex items-center justify-center gap-2.5">
+          <i data-lucide="calendar" class="w-5 h-5"></i> Conhecer Nossos Cultos
         </a>
-        <a href="https://meet.google.com/smd-rgjb-ygt" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium transition duration-200 flex items-center justify-center gap-2 backdrop-blur-sm">
+        <a href="https://meet.google.com/smd-rgjb-ygt" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-white/15 hover:bg-white/25 border border-white/30 text-white font-medium transition duration-200 flex items-center justify-center gap-2.5 backdrop-blur-md">
           <i data-lucide="video" class="w-5 h-5 text-brand-300"></i> Live da Fé (Quarta 20h)
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ================= EVENTO ESPECIAL (11/10) ================= -->
-  <section id="evento-especial" class="py-16 sm:py-24 px-4 bg-gradient-to-b from-dark-950 via-slate-900 to-dark-950 text-white relative overflow-hidden border-b border-brand-500/20">
+  <!-- ================= NOSSOS CULTOS REGULARES (NOVO PÔSTER) ================= -->
+  <section id="cultos" class="py-16 sm:py-24 px-4 bg-gradient-to-b from-dark-950 via-slate-900 to-dark-950 text-white relative overflow-hidden border-b border-brand-500/20">
     <div class="max-w-6xl mx-auto relative z-10">
       
       <div class="text-center max-w-3xl mx-auto mb-12">
         <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/20 text-brand-300 border border-brand-500/40 text-xs uppercase font-bold tracking-widest mb-4">
-          <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping"></span> Programação Especial
+          <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span> Celebrações Semanais
         </span>
         <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white mb-3">
-          Culto Especial de Fé, <br class="hidden sm:block"><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 via-brand-400 to-amber-200">Curas e Milagres</span>
+          Participe dos Nossos Cultos <br class="hidden sm:block">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 via-brand-400 to-amber-200">Presenciais e Online</span>
         </h2>
         <p class="text-slate-300 text-sm sm:text-base font-light max-w-xl mx-auto">
-          Um domingo dedicado ao derramar do poder de Deus sobre você e sua família.
+          Um ambiente de fé, cura, restauração e palavra viva para você e toda a sua família. Todos são sempre bem-vindos!
         </p>
       </div>
 
@@ -191,17 +202,17 @@
         <!-- Cartaz Clicável com Zoom -->
         <div class="lg:col-span-6 flex flex-col items-center">
           <div 
-            onclick="openImageModal('evento-11-outubro.jpeg')" 
+            onclick="openImageModal('cultos-regulares.jpeg')" 
             class="group relative rounded-2xl overflow-hidden shadow-2xl border-2 border-brand-500/40 cursor-zoom-in transition-all duration-300 hover:scale-[1.02] bg-dark-950"
             title="Toque para ampliar o cartaz"
           >
             <img 
-              src="evento-11-outubro.jpeg" 
-              alt="Culto Especial de Fé, Curas e Milagres - 11 de Outubro com Pr. Heber Dutra" 
-              class="w-full h-auto object-cover max-h-[460px] group-hover:brightness-105 transition"
+              src="cultos-regulares.jpeg" 
+              alt="Participe de nossos Cultos presenciais e pelo YouTube - Pr. Heber Dutra - Igreja Vida de Fé" 
+              class="w-full h-auto object-cover max-h-[480px] group-hover:brightness-105 transition"
             />
             <span class="absolute top-3 left-3 bg-brand-500 text-dark-950 text-xs font-bold px-3 py-1 rounded-full shadow-md">
-              Entrada Franca
+              Todos são Bem-Vindos
             </span>
           </div>
           <p class="text-xs text-slate-400 mt-2.5 flex items-center gap-1.5">
@@ -209,7 +220,7 @@
           </p>
         </div>
 
-        <!-- Detalhes do Evento -->
+        <!-- Detalhes dos Cultos -->
         <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
           <div class="space-y-4">
             
@@ -218,9 +229,9 @@
                 <i data-lucide="calendar" class="w-6 h-6"></i>
               </div>
               <div>
-                <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold block">Quando</span>
-                <p class="text-lg font-bold text-white">Domingo, 11 de Outubro</p>
-                <p class="text-brand-300 text-sm font-semibold">Início às 18h30 • Entrada Franca</p>
+                <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold block">Culto Principal</span>
+                <p class="text-lg font-bold text-white">Aos Domingos, às 18h30</p>
+                <p class="text-brand-300 text-sm font-semibold">Presencial & Transmissão ao vivo pelo YouTube</p>
               </div>
             </div>
 
@@ -231,7 +242,7 @@
               <div>
                 <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold block">Ministração</span>
                 <p class="text-lg font-bold text-white">Pr. Heber Dutra</p>
-                <p class="text-slate-300 text-xs">Palavra viva, clamor por libertação, curas e milagres</p>
+                <p class="text-slate-300 text-xs">Palavra inspirada da fé, comunhão e oração por milagres</p>
               </div>
             </div>
 
@@ -240,7 +251,7 @@
                 <i data-lucide="map-pin" class="w-6 h-6"></i>
               </div>
               <div>
-                <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold block">Local</span>
+                <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold block">Localização</span>
                 <p class="text-sm font-bold text-white">Igreja Vida de Fé — Sede</p>
                 <p class="text-slate-300 text-xs leading-relaxed">
                   Av. Heráclito Mourão de Miranda, 2630<br>
@@ -253,7 +264,7 @@
 
           <div class="pt-2 flex flex-col sm:flex-row gap-3">
             <a 
-              href="https://api.whatsapp.com/send?phone=5531982881150&text=Ol%C3%A1%20Michelle!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Culto%20Especial%20de%20Curas%20e%20Milagres%20do%20dia%2011/10." 
+              href="https://api.whatsapp.com/send?phone=5531982881150&text=Ol%C3%A1%20Michelle!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20cultos%20da%20Igreja%20Vida%20de%20F%C3%A9." 
               target="_blank" 
               rel="noopener noreferrer"
               class="flex-1 py-3.5 px-5 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl transition flex items-center justify-center gap-2 shadow-lg shadow-green-500/20 text-sm"
@@ -483,7 +494,7 @@
               Precisa de informações sobre a Igreja Vida de Fé?
             </h2>
             <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 font-light">
-              Converse diretamente com a <strong>Michelle</strong> pelo WhatsApp! Ela está pronta para responder dúvidas sobre horários, localização, eventos e como participar da nossa comunidade.
+              Converse diretamente com a <strong>Michelle</strong> pelo WhatsApp! Ela está pronta para responder dúvidas sobre horários, localização, programações e como participar da nossa comunidade.
             </p>
 
             <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-4 mb-6 flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -632,7 +643,6 @@
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
       
       <div class="md:col-span-2">
-        <!-- Logo Oficial IVF no Rodapé (Com fundo claro protetor se for logo azul escura) -->
         <div class="inline-block bg-white/95 px-3 py-1.5 rounded-xl mb-4 border border-slate-800">
           <img 
             src="logo-azul-transp.png" 
@@ -701,9 +711,9 @@
       <i data-lucide="x" class="w-6 h-6"></i>
     </button>
     <div class="max-w-4xl max-h-[90vh] flex flex-col items-center" onclick="event.stopPropagation()">
-      <img id="modalImage" src="evento-11-outubro.jpeg" alt="Cartaz Ampliado" class="max-w-full max-h-[82vh] object-contain rounded-xl shadow-2xl border border-brand-400/30" />
+      <img id="modalImage" src="cultos-regulares.jpeg" alt="Cartaz Ampliado" class="max-w-full max-h-[82vh] object-contain rounded-xl shadow-2xl border border-brand-400/30" />
       <span class="mt-3 text-xs text-slate-300 bg-dark-900/80 px-4 py-1.5 rounded-full border border-slate-700">
-        Culto Especial de Fé, Curas e Milagres • Domingo, 11/10 às 18h30
+        Cultos Presenciais e pelo YouTube • Domingos às 18h30
       </span>
     </div>
   </div>
@@ -722,7 +732,7 @@
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
 
-      <!-- Foto de Família (Enquadramento Equilibrado) -->
+      <!-- Foto de Família -->
       <div class="h-88 sm:h-[420px] w-full relative bg-slate-950 overflow-hidden">
         <img 
           src="pastor-heber-familia.jpeg" 
@@ -739,7 +749,7 @@
         </div>
       </div>
 
-      <!-- Texto Biográfico com seus dados -->
+      <!-- Texto Biográfico -->
       <div class="p-6 sm:p-8 space-y-6 max-h-[55vh] overflow-y-auto">
         
         <div>
@@ -846,7 +856,7 @@
       });
     }
 
-    // Envio do formulário de oração direto para o WhatsApp (Compatível com Safari e iOS)
+    // Envio do formulário de oração direto para o WhatsApp
     document.getElementById('prayerForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const nome = document.getElementById('prayerName').value.trim();
@@ -875,7 +885,7 @@
       document.body.classList.remove('overflow-hidden');
     }
 
-    // Funções do Popup do Pr. Heber
+    // Funções do Popup Pastoral
     function openPastorModal() {
       const modal = document.getElementById('pastorModal');
       modal.classList.remove('hidden');
@@ -891,7 +901,7 @@
       document.body.classList.remove('overflow-hidden');
     }
 
-    // Tecla ESC fecha os modais abertos
+    // Tecla ESC fecha os modais
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
         closeImageModal();
